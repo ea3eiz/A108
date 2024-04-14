@@ -1,5 +1,5 @@
 #!/bin/bash
-apt install xterm
+
 sudo apt-get install python3 python3-venv sox git build-essential libtool cmake usbutils -y
 sudo apt-get install libusb-1.0-0-dev rng-tools libsamplerate-dev libatlas3-base libgfortran5 libopenblas-dev -y
 
