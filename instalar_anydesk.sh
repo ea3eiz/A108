@@ -29,9 +29,20 @@ MARRON="\33[38;5;138m"
                         echo "***********************************************************************"
                         echo "***********************************************************************"
                         sleep 2  
-                        sudo rm -R /home/pi/.anydesk
+                        #sudo rm -R /home/pi/.anydesk
                         mkdir /home/pi/.temp
                         cd /home/pi/.temp
+                        sudo killall anydesk
+
+                        sudo apt update
+                        wget http://associacioader.com/descargas/anydesk_2.9.4-1_armhf.deb
+                        sudo dpkg -i anydesk_2.9.4-1_armhf.deb
+                        sudo apt-get install -f -s
+                        sudo apt --fix-broken install
+                        sudo dpkg -i anydesk_2.9.4-1_armhf.deb
+                        sudo apt-get install -f -s
+                        sudo rm /home/pi/.local/RESTAURAR/Downloads/anydesk_2.9.4-1_armhf.deb
+                        clear
                         
                         wget https://download.anydesk.com/rpi/anydesk_6.3.0-1_armhf.deb
                         sudo dpkg --add-architecture armhf
@@ -40,9 +51,9 @@ MARRON="\33[38;5;138m"
                         sudo apt install libraspberrypi0:armhf libraspberrypi-bin:armhf libgudev-1.0-0:armhf libpolkit-gobject-1-0:armhf
                         sudo apt update --fix-missing
                         sudo rm /home/pi/.local/RESTAURAR/Downloads/anydesk_6.3.0-1_armhf.deb
-                        sudo rm /home/pi/.local/RESTAURAR/Downloads/anydesk_2.9.4-1_armhf.deb
+                        
                         clear
-
+                        
                         echo "\v\v\v\v\v\v"
                         echo "${VERDE}"
                         echo "***********************************************************************"
