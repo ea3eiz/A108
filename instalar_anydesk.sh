@@ -55,7 +55,11 @@ MARRON="\33[38;5;138m"
                         sudo apt install libraspberrypi0:armhf libraspberrypi-bin:armhf libgudev-1.0-0:armhf libpolkit-gobject-1-0:armhf
                         sudo apt update --fix-missing
                         sudo rm -R /home/pi/.temp
-
+                        sleep 3
+                        sudo sed -i "12c User=pi" /etc/systemd/system/anydesk.service
+                        sleep 3
+                        sudo systemctl daemon-reload
+                        sleep 3
                         clear
                         
                         echo "\v\v\v\v\v\v"
