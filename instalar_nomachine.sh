@@ -10,7 +10,7 @@ GRIS="\033[0m"
 MARRON="\33[38;5;138m"
 
                         # Comprueba si NOMACHINE está instalado
-                        estado_nomachine=$(awk "NR==31" /home/pi/status.ini)
+                        estado_nomachine=$(awk "NR==66" /home/pi/status.ini)
                         if [ "$estado_nomachine" = 'NOMACHINE=ON' ];then
                         echo "\v\v\v\v\v\v"
                         echo "${ROJO}"
