@@ -41,7 +41,7 @@ MARRON="\33[38;5;138m"
                         echo "                  SE HA INSTALADO NOMACHINE CON EXITO                    "
                         echo "***********************************************************************" 
                         echo "***********************************************************************"                      
-                        sed -i "31c NOMACHINE=ON" /home/pi/status.ini                        
+                        sed -i "66c NOMACHINE=ON" /home/pi/status.ini                        
                         sleep 3
                         fi                       
                        
