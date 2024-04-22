@@ -17,6 +17,6 @@ MARRON="\33[38;5;138m"
                         echo "***********************************************************************"
                         echo "***********************************************************************"
                         sleep 2                    
-                        sed -i "31c NOMACHINE=OFF" /home/pi/status.ini                        
+                        sed -i "66c NOMACHINE=OFF" /home/pi/status.ini                        
                         sleep 3
                         sudo killall nomachine
